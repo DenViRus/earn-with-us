@@ -1,0 +1,219 @@
+.section-card {
+  max-width: 41.9rem;
+  min-width: 32.8rem;
+  width: 100%;
+  height: 35.2rem;
+
+  border-radius: 2rem;
+  position: relative;
+
+  .card-heading-box {
+    max-width: 36.3rem;
+    min-width: 27.2rem;
+    width: 100%;
+    display: flex;
+
+    color: rgba(255, 255, 255, 1);
+
+    margin: 2rem auto auto 2rem;
+
+    position: relative;
+    z-index: 2;
+  }
+
+  .card-number {
+    width: 4.8rem;
+    height: 4.8rem;
+    font-size: 2.4rem;
+    line-height: 4.8rem;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 50%;
+    position: relative;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.32) 100%);
+
+    &::before {
+      position: absolute;
+      top: 0.2rem;
+      left: 0.2rem;
+      right: 0.2rem;
+      bottom: 0.2rem;
+      border-radius: 50%;
+    }
+  }
+
+  .card-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    margin-left: 1.6rem;
+
+    @media (max-width: 410px) {
+      max-width: 25rem;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0.2rem;
+    left: 0.2rem;
+    right: 0.2rem;
+    bottom: 0.2rem;
+    border-radius: 1.8rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .card-image-box {
+    position: absolute;
+    transition: all 0.2s ease-in-out;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &--affiliate-link {
+    background: linear-gradient(180deg, rgba(71, 95, 223, 0.7) 0%, rgba(71, 95, 223, 1) 100%);
+
+    .card-number::before {
+      content: "1";
+      background: linear-gradient(180deg, rgba(41, 32, 165, 1) 0%, rgba(99, 119, 225, 1) 100%);
+    }
+
+    .card-image-box {
+      width: 30.54rem;
+      height: 29rem;
+      top: 10.3rem;
+      left: calc(50% - 15.27rem);
+    }
+
+    &::before {
+      background: linear-gradient(180deg, rgba(99, 119, 225, 1) 0%, rgba(41, 32, 165, 1) 100%);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 9.2rem;
+      left: calc(100% - 4.6rem);
+      width: 9.2rem;
+      height: 4rem;
+      background-image: url("/assets/icon/arrow.png");
+      background-size: cover;
+      z-index: 2;
+      transition: all 0.2s ease-in-out;
+
+      @media (max-width: 870px) {
+        transform: rotateX(180deg) rotate(-90deg);
+        left: calc(100% - 6.4rem);
+        top: calc(100% - 1.5rem);
+      }
+    }
+
+    &:hover {
+      &::before {
+        background: linear-gradient(180deg, rgba(101, 126, 255, 1) 0%, rgba(41, 32, 165, 1) 100%);
+      }
+
+      .card-image-box {
+        top: 9.9rem;
+      }
+    }
+  }
+
+  &--about-iiicom {
+    background: linear-gradient(180deg, rgba(178, 71, 223, 0.7) 0%, rgba(178, 71, 223, 1) 100%);
+
+    .card-number::before {
+      content: "2";
+      background: linear-gradient(180deg, rgba(116, 21, 149, 1) 0%, rgba(225, 99, 225, 1) 100%);
+    }
+
+    .card-image-box {
+      width: 37.8rem;
+      height: 34.2rem;
+      top: 6.2rem;
+      left: calc(50% - 18.9rem);
+    }
+
+    &::before {
+      background: linear-gradient(180deg, rgba(225, 99, 225, 1) 0%, rgba(116, 21, 149, 1) 100%);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 9.2rem;
+      left: calc(100% - 4.6rem);
+      width: 9.2rem;
+      height: 4rem;
+      background-image: url("/assets/icon/arrow.png");
+      background-size: cover;
+      z-index: 2;
+      transition: all 0.2s ease-in-out;
+
+      @media (max-width: 1280px) {
+        transform: rotateX(180deg) rotate(-90deg);
+        left: calc(45% - 4.6rem);
+        top: 100%;
+      }
+
+      @media (max-width: 870px) {
+        transform: rotateX(180deg) rotate(-90deg);
+        left: calc(100% - 6.4rem);
+        top: calc(100% - 1.5rem);
+      }
+    }
+
+    &:hover {
+      &::before {
+        background: linear-gradient(180deg, rgba(252, 105, 252, 1) 0%, rgba(116, 21, 149, 1) 100%);
+      }
+
+      .card-image-box {
+        top: 5.8rem;
+      }
+    }
+  }
+
+  &--good-percentage {
+    background: linear-gradient(180deg, rgba(58, 130, 7, 0.5) 0%, rgba(58, 130, 7, 1) 100%);
+
+    .card-number::before {
+      content: "3";
+      background: linear-gradient(180deg, rgba(1, 77, 29, 1) 0%, rgba(85, 206, 0, 1) 100%);
+    }
+
+    .card-image-box {
+      width: 39.2rem;
+      height: 29.28rem;
+      top: 9.4rem;
+      left: calc(50% - 19.6rem);
+    }
+
+    &::before {
+      background: linear-gradient(180deg, rgba(85, 206, 0, 1) 0%, rgba(1, 77, 29, 1) 100%);
+    }
+
+    &:hover {
+      &::before {
+        background: linear-gradient(180deg, rgba(93, 225, 1, 1) 0%, rgba(1, 77, 29, 1) 100%);
+      }
+
+      .card-image-box {
+        top: 9rem;
+      }
+    }
+  }
+
+  &:hover {
+    &::before {
+      top: 0.6rem;
+      left: 0.6rem;
+      right: 0.6rem;
+      bottom: 0.6rem;
+    }
+  }
+}
